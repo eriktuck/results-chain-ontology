@@ -1,0 +1,75 @@
+@prefix doc: <http://example.org/ontology/documents#> .
+@prefix schema: <http://schema.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontology/documents> a owl:Ontology ;
+    rdfs:label "Simplified Document Metadata Ontology" .
+
+#################################################################
+#    Classes
+#################################################################
+
+doc:Document a owl:Class ;
+    rdfs:label "Document" ;
+    rdfs:subClassOf schema:DigitalDocument .
+
+doc:Organization a owl:Class ;
+    rdfs:label "Organization" ;
+    rdfs:subClassOf schema:Organization ;
+    rdfs:comment "The entity providing access to the document (e.g., World Bank, IUCN)." .
+
+#################################################################
+#    Properties
+#################################################################
+
+doc:identifier a owl:DatatypeProperty ;
+    rdfs:subPropertyOf schema:identifier ;
+    rdfs:label "Internal Identifier" ;
+    rdfs:domain doc:Document ;
+    rdfs:range xsd:string .
+
+doc:title a owl:DatatypeProperty ;
+    rdfs:subPropertyOf schema:name ;
+    rdfs:label "Display Title" ;
+    rdfs:domain doc:Document ;
+    rdfs:range xsd:string .
+
+doc:dateModified a owl:DatatypeProperty ;
+    rdfs:subPropertyOf schema:dateModified ;
+    rdfs:label "Last Modified Date" ;
+    rdfs:domain doc:Document ;
+    rdfs:range xsd:dateTime .
+
+doc:year a owl:DatatypeProperty ;
+    rdfs:subPropertyOf schema:datePublished ;
+    rdfs:label "Year Published" ;
+    rdfs:domain doc:Document ;
+    rdfs:range xsd:gYear .
+
+doc:url a owl:DatatypeProperty ;
+    rdfs:subPropertyOf schema:url ;
+    rdfs:label "URL" ;
+    rdfs:domain doc:Document ;
+    rdfs:range xsd:anyURI .
+
+doc:type a owl:DatatypeProperty ;
+    rdfs:subPropertyOf schema:genre ;
+    rdfs:label "Document Type" ;
+    rdfs:domain doc:Document ;
+    rdfs:range xsd:string .
+
+doc:author a owl:DatatypeProperty ;
+    rdfs:subPropertyOf schema:author ;
+    rdfs:label "Author(s)" ;
+    rdfs:comment "A string representing the list of authors (e.g., 'Margoluis, R., Stem, C., et al.')" ;
+    rdfs:domain doc:Document ;
+    rdfs:range xsd:string .
+
+doc:sourceOrganization a owl:ObjectProperty ;
+    rdfs:subPropertyOf schema:provider ;
+    rdfs:label "Source Organization" ;
+    rdfs:comment "The organization where the document was accessed." ;
+    rdfs:domain doc:Document ;
+    rdfs:range doc:Organization .

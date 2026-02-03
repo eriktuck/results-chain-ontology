@@ -1,0 +1,133 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rc:    <http://example.org/ontology/results-chain#> .
+@prefix shrc:  <http://example.org/shapes/results-chain#> .
+
+#################################################################
+#    Strategy Shape
+#################################################################
+
+shrc:StrategyShape
+    a sh:NodeShape ;
+    sh:targetClass rc:Strategy ;
+    sh:property [
+        sh:path rc:leadsTo ;
+        sh:description "Strategies must lead to either a Result or an Impact." ;
+        sh:or (
+            [ sh:class rc:Result ]
+            [ sh:class rc:Impact ]
+        ) ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path rc:addresses ;
+        sh:description "If a strategy addresses something, it must be a Threat Reduction Result." ;
+        sh:class rc:ThreatReductionResult ;
+    ] ;
+    sh:property [
+        sh:path skos:exactMatch ;
+        sh:description "Strategies should align with CMP Action Taxonomy." ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+    ] .
+
+#################################################################
+#    Result Shape
+#################################################################
+
+shrc:ResultShape
+    a sh:NodeShape ;
+    sh:targetClass rc:Result ;
+    sh:property [
+        sh:path rc:leadsTo ;
+        sh:description "Results lead to other Results or final Impacts." ;
+        sh:or (
+            [ sh:class rc:Result ]
+            [ sh:class rc:Impact ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path rc:hasIndicator ;
+        sh:description "Every result should have at least one indicator." ;
+        sh:class rc:Indicator ;
+        sh:minCount 1 ;
+    ] .
+
+#################################################################
+#    Threat Reduction Result Shape
+#################################################################
+
+shrc:ThreatReductionResultShape
+    a sh:NodeShape ;
+    sh:targetClass rc:ThreatReductionResult ;
+    sh:property [
+        sh:path skos:related ;
+        sh:description "Threat Reduction Results must align with CMP Threat Taxonomy via skos:related." ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+    ] .
+
+#################################################################
+#    Impact Shape
+#################################################################
+
+shrc:ImpactShape
+    a sh:NodeShape ;
+    sh:targetClass rc:Impact ;
+    sh:property [
+        sh:path rc:hasIndicator ;
+        sh:description "Impacts must have at least one indicator for measurement." ;
+        sh:class rc:Indicator ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path skos:narrowMatch ;
+        sh:description "Impacts should align with ENVO via skos:narrowMatch." ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+    ] .
+
+#################################################################
+#    Context Shape
+#################################################################
+
+shrc:ContextShape
+    a sh:NodeShape ;
+    sh:targetClass rc:Context ;
+    sh:property [
+        sh:path owl:sameAs ;
+        sh:description "Contexts must be linked to external URIs (Wikidata/DBpedia)." ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+    ] .
+
+#################################################################
+#    Indicator Shape
+#################################################################
+
+shrc:IndicatorShape
+    a sh:NodeShape ;
+    sh:targetClass rc:Indicator ;
+    sh:property [
+        sh:path skos:related ;
+        sh:description "Indicators should align with the UNBIS Thesaurus." ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+    ] .
+
+#################################################################
+#    General Property Constraints (Common to Multiple Classes)
+#################################################################
+
+shrc:OccursInShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf rc:occursIn ;
+    sh:property [
+        sh:path rc:occursIn ;
+        sh:description "The range of occursIn must always be a Context." ;
+        sh:class rc:Context ;
+    ] .

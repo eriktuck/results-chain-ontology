@@ -1,0 +1,1060 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://example.org/mappings/envo-to-unbis> a owl:Ontology ;
+  rdfs:label "Crosswalk: ENVO to UNBIS"@en ;
+  dcterms:description "Manual crosswalk connecting ENVO environmental entities to UNBIS indicators."@en .
+#  owl:imports <http://purl.obolibrary.org/obo/envo.owl> ;
+#  owl:imports <http://metadata.un.org/thesaurus/> .
+
+#################################################################
+#    Mappings
+#################################################################
+
+<http://purl.obolibrary.org/obo/CHEBI_10545>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001978> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_134024>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000967> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_134179>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006904> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_13643>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002696> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_140503>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003510> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_15377>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006939> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_16134>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000265> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_16183>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004071> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_16189>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006284> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_16199>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006831> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_16236>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000226> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_16240>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003022> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_16482>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004311> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_16526>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000817> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_16716>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000573> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_17051>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002403> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_17578>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006546> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_17632>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004416> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_17790>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000226> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_22712>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000573> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_23982>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000226> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_24632>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003014> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_24866>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005684> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_25477>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004311> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_25812>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004684> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_25944>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004839> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_26020>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004881> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_26820>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006284> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_26836>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006288> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_27024>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006546> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_27338>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1007093> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_27780>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001026> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_27889>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003655> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_30052>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001300> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_30187>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000252> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_30751>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002504> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_30879>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000230> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_32178>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006361> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_33250>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000442> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_33286>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000128> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_33287>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002303> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_33290>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002413> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_33292>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002561> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_33316>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002862> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_33400>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004944> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_33415>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000816> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_33623>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000252> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_33641>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004611> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_33709>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000264> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_35196>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004421> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_35230>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002507> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_35341>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006205> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_35480>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000273> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_39479>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000759> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_46661>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000410> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_46662>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004167> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_46787>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006045> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_48107>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004417> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_52217>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004870> ;
+.
+<http://purl.obolibrary.org/obo/CHEBI_63248>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004682> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000014>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000792> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000015>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004576> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000022>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005581> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000025>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005507> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000026>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006990> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000027>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006148> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000035>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1007000> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000036>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003418> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000050>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002677> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000057>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003881> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000065>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005366> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000067>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000864> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000068>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006739> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000073>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001247> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000075>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000696> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000076>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004169> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000098>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003433> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000099>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004593> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000101>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001555> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000117>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004935> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000133>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002685> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000136>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001556> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000147>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004565> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000150>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001308> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000166>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001308> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000175>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003512> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000220>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000370> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000223>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001274> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000247>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006906> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000262>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006201> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000292>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005580> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000359>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004340> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000376>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004326> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000377>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000402> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000393>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000041> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000394>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006219> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000463>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005042> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000520>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003611> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00000533>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005700> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00001995>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005599> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00002005>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000185> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00002010>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005682> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00002018>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005837> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00002040>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1007053> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00002042>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006307> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00002061>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004605> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00002168>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002702> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00002169>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001047> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00002170>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001174> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00002173>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002924> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00002214>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005068> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00002271>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004504> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00002872>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000486> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00002982>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001023> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00002984>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004846> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00003030>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005897> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00003043>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005839> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00003064>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001762> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00003074>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003891> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00003861>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003123> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00003869>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006227> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00003885>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000692> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00003963>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006929> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00004638>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005717> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00010505>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000090> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00010621>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004012> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00010623>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001740> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00010624>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004326> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00010625>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004326> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_00012408>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000354> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000002>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006990> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000003>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004606> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000112>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005015> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000207>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004026> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000267>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000439> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000298>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001273> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000320>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003911> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000356>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002739> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000380>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004569> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000406>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005948> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000407>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001052> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000419>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002906> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000458>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001210> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000460>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006377> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000475>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000694> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000480>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002686> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000519>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003637> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000537>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004686> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000538>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006226> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000540>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006717> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000542>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004686> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000545>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003397> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000552>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004336> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000553>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003763> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000555>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001176> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000556>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000607> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000557>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003762> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000560>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000903> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000580>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006444> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000581>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000871> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000600>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005368> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000601>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004260> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000602>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006719> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000604>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006858> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000608>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005882> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000614>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000591> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000615>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004261> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000629>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001030> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000634>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006905> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000637>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004676> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000646>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003775> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000653>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005933> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000668>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002644> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000677>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001815> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000687>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001057> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000689>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006729> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000691>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000471> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000705>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003586> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000706>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006019> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000710>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002395> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000739>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002986> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000760>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001036> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000763>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005643> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000765>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003187> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000772>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005627> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000773>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006878> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000781>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005241> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000786>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002355> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000791>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002483> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000800>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004922> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000801>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006171> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000803>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000428> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000817>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000626> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000819>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003031> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000841>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005287> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000865>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001950> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000876>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006216> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000932>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004530> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000934>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005522> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000935>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006569> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01000987>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003955> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001004>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002769> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001008>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004068> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001023>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005314> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001078>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006977> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001082>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001029> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001110>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001886> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001125>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003035> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001194>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003837> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001221>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004581> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001243>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002481> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001248>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000298> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001265>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006495> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001296>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006715> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001297>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001471> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001346>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006019> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001357>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000379> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001432>
+  skos:closeMatch <http://metadata.un.org/thesaurus/040500> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001437>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004172> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001440>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001048> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001442>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000171> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001482>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006557> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001488>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000210> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001526>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002552> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001546>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003036> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001564>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005367> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001567>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004326> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001785>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003580> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001788>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003907> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001789>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002544> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001790>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006465> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001803>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006710> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001813>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001247> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001829>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002986> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001870>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002600> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01001886>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003605> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01003000>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006108> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01003002>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004747> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_01003014>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003415> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_02000000>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006350> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_02000001>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006484> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_02000007>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006529> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_02000043>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000615> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_02000047>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000294> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_02000091>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001042> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_02000093>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006807> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_02000096>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003414> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_02000111>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001303> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_02000119>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004604> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_02000125>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004750> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_02000127>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001043> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_02000128>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001043> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_02000133>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004507> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_02500001>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001594> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_02500004>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002692> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_02500005>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003586> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_02500011>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000094> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_02500012>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001550> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_02500013>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005402> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_02500036>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005003> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_02500037>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000196> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_02500039>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006951> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_02500041>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002080> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_02500042>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005004> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_02500043>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002080> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03000033>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003928> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03400011>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002807> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03500001>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004945> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03501119>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000139> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03501120>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001481> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03501122>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000218> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03501130>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005724> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03501182>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002827> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03501216>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006163> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03501219>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1007018> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03501233>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006929> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03501253>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002804> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03501261>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1007004> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03501268>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004705> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03501290>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006296> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03501302>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001309> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03501307>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000890> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03501347>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002931> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03501354>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006198> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03510003>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002440> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03510006>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001646> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03510007>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002603> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03510018>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002799> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03510019>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001026> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03510021>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004694> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03510023>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004694> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03510037>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005338> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03510070>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002820> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03600006>
+  skos:closeMatch <http://metadata.un.org/thesaurus/c_8213505b> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03600013>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004597> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03600017>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005934> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03600050>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006101> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03600061>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005883> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03600066>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005597> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03600080>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003140> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03600085>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000184> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03600087>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002758> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_03600093>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005710> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_06105014>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000604> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_06105021>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000071> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_06105101>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004941> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_06105113>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002377> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_06105115>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002378> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_06105211>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005624> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_1000745>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001769> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_1000751>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000539> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_2000000>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000921> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_2000008>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001042> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_2000010>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001042> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_2000015>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002035> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_2000025>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004486> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_2000032>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006493> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_2000034>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002666> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_2000037>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006496> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_2000038>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006496> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_21001216>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006767> ;
+.
+<http://purl.obolibrary.org/obo/ENVO_21001219>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003396> ;
+.
+<http://purl.obolibrary.org/obo/FOODON_00001002>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002413> ;
+.
+<http://purl.obolibrary.org/obo/FOODON_00002300>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006332> ;
+.
+<http://purl.obolibrary.org/obo/FOODON_00002753>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000554> ;
+.
+<http://purl.obolibrary.org/obo/FOODON_03310646>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003689> ;
+.
+<http://purl.obolibrary.org/obo/FOODON_03311737>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1005136> ;
+.
+<http://purl.obolibrary.org/obo/FOODON_03400164>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001483> ;
+.
+<http://purl.obolibrary.org/obo/FOODON_03420108>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006276> ;
+.
+<http://purl.obolibrary.org/obo/GO_0015979>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004892> ;
+.
+<http://purl.obolibrary.org/obo/NCBITaxon_10239>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006887> ;
+.
+<http://purl.obolibrary.org/obo/NCBITaxon_4751>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002570> ;
+.
+<http://purl.obolibrary.org/obo/OBI_0000967>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001268> ;
+.
+<http://purl.obolibrary.org/obo/PATO_0000008>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006134> ;
+.
+<http://purl.obolibrary.org/obo/PATO_0000014>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1001093> ;
+.
+<http://purl.obolibrary.org/obo/PATO_0000018>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002402> ;
+.
+<http://purl.obolibrary.org/obo/PATO_0000146>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006454> ;
+.
+<http://purl.obolibrary.org/obo/PATO_0000165>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006515> ;
+.
+<http://purl.obolibrary.org/obo/PATO_0001682>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1003835> ;
+.
+<http://purl.obolibrary.org/obo/PATO_0002242>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1006134> ;
+.
+<http://purl.obolibrary.org/obo/PATO_0015009>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002998> ;
+.
+<http://purl.obolibrary.org/obo/UBERON_0000178>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000646> ;
+.
+<http://purl.obolibrary.org/obo/UBERON_0000948>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002847> ;
+.
+<http://purl.obolibrary.org/obo/UBERON_0001016>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004376> ;
+.
+<http://purl.obolibrary.org/obo/UBERON_0001913>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1004153> ;
+.
+<http://purl.obolibrary.org/obo/UBERON_0001981>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000649> ;
+.
+<http://purl.obolibrary.org/obo/UBERON_0004535>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1000826> ;
+.
+<http://purl.obolibrary.org/obo/UBERON_0036016>
+  skos:closeMatch <http://metadata.un.org/thesaurus/1002914> ;
+.

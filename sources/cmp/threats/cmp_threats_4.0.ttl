@@ -1,0 +1,409 @@
+@prefix cmpt: <https://conservationstandards.org/library-item/threats-classification/#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://conservationstandards.org/library-item/threats-classification/> a owl:Ontology ;
+    rdfs:label "CMP Direct Threats Classification v4.0 (Ontology)"@en ;
+    owl:versionInfo "4.0" ;
+    dcterms:description "Machine-readable SKOS representation of the CMP Direct Threats Taxonomy."@en .
+
+cmpt:ThreatScheme a skos:ConceptScheme ;
+    rdfs:label "CMP Direct Threats Classification v4.0"@en .
+
+# Custom addition for crosswalk compatibility
+cmpt:OTHER a skos:Concept ;
+    skos:prefLabel "UNCLASSIFIED / OTHER"@en ;
+    skos:notation "OTHER" ;
+    skos:definition "Catch-all category for unclassified threats."@en ;
+    skos:topConceptOf cmpt:ThreatScheme .
+
+cmpt:A a skos:Concept ;
+    skos:prefLabel "Use of Lands & Waters"@en ;
+    skos:notation "A" ;
+    skos:definition "Human uses of land and water areas that have a substantial spatial footprint. Includes effects from their construction (e.g. ecosystem conversion), ongoing use, and abandonment."@en ;
+    skos:topConceptOf cmpt:ThreatScheme .
+
+cmpt:1 a skos:Concept ;
+    skos:prefLabel "Residential, Commercial & Recreation Areas"@en ;
+    skos:notation "1" ;
+    skos:definition "Human settlements, industrial areas, and other non-agricultural land uses with a substantial footprint."@en ;
+    skos:broader cmpt:A ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:1.1 a skos:Concept ;
+    skos:prefLabel "Residential Areas"@en ;
+    skos:notation "1.1" ;
+    skos:definition "Cities, towns, and settlements including non-housing development typically integrated with housing."@en ;
+    skos:broader cmpt:1 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:1.2 a skos:Concept ;
+    skos:prefLabel "Commercial & Industrial Areas"@en ;
+    skos:notation "1.2" ;
+    skos:definition "Factories and other commercial centers."@en ;
+    skos:broader cmpt:1 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:1.3 a skos:Concept ;
+    skos:prefLabel "Recreation & Tourism Areas"@en ;
+    skos:notation "1.3" ;
+    skos:definition "Tourism and recreation sites with a substantial spatial footprint that are not fully integrated into municipal areas."@en ;
+    skos:broader cmpt:1 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:2 a skos:Concept ;
+    skos:prefLabel "Agriculture & Aquaculture"@en ;
+    skos:notation "2" ;
+    skos:definition "Farming and ranching including agricultural expansion, intensification, or practices with a spatial footprint; includes tree plantations, mariculture, and aquaculture."@en ;
+    skos:broader cmpt:A ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:2.1 a skos:Concept ;
+    skos:prefLabel "Annual & Perennial Non-Timber Crops"@en ;
+    skos:notation "2.1" ;
+    skos:definition "Crops planted for food, fodder, fiber, fuel, or other uses."@en ;
+    skos:broader cmpt:2 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:2.2 a skos:Concept ;
+    skos:prefLabel "Wood & Pulp Plantations"@en ;
+    skos:notation "2.2" ;
+    skos:definition "Stands of trees planted for timber or fiber outside of natural forests, often with non-native species."@en ;
+    skos:broader cmpt:2 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:2.3 a skos:Concept ;
+    skos:prefLabel "Terrestrial Animal Farming, Ranching & Herding"@en ;
+    skos:notation "2.3" ;
+    skos:definition "Domestic terrestrial animals raised in one location on farmed or non-local resources (farming); also domestic or semidomesticated animals allowed to roam in semi-natural areas (ranching) or the wild and supported by natural habitats (herding)."@en ;
+    skos:broader cmpt:2 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:2.4 a skos:Concept ;
+    skos:prefLabel "Marine & Freshwater Aquaculture"@en ;
+    skos:notation "2.4" ;
+    skos:definition "Aquatic species raised for harvest in artificial water bodies (analogous to terrestrial 'farming'), enclosures in natural waters (analogous to 'ranching'), or unenclosed natural waters (analogous to 'herding')."@en ;
+    skos:broader cmpt:2 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:3 a skos:Concept ;
+    skos:prefLabel "Energy Production & Mining"@en ;
+    skos:notation "3" ;
+    skos:definition "Extraction of non-biological resources, often widely dispersed across the land / sea scape."@en ;
+    skos:broader cmpt:A ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:3.1 a skos:Concept ;
+    skos:prefLabel "Oil & Gas Exploration & Extraction"@en ;
+    skos:notation "3.1" ;
+    skos:definition "Exploring for and extracting petroleum and other liquid hydrocarbons."@en ;
+    skos:broader cmpt:3 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:3.2 a skos:Concept ;
+    skos:prefLabel "Mining & Quarrying"@en ;
+    skos:notation "3.2" ;
+    skos:definition "Exploring for and developing and producing minerals and rocks."@en ;
+    skos:broader cmpt:3 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:3.3 a skos:Concept ;
+    skos:prefLabel "Renewable Energy"@en ;
+    skos:notation "3.3" ;
+    skos:definition "Exploring for and developing and producing renewable energy."@en ;
+    skos:broader cmpt:3 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:4 a skos:Concept ;
+    skos:prefLabel "Transportation, Service & Security Corridors"@en ;
+    skos:notation "4" ;
+    skos:definition "Linear infrastructure such as long, narrow service or transport corridors including the effects associated with their use (e.g. mortality from vehicle collisions, restriction of species movement)."@en ;
+    skos:broader cmpt:A ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:4.1 a skos:Concept ;
+    skos:prefLabel "Roads, Trails & Railroads"@en ;
+    skos:notation "4.1" ;
+    skos:definition "Transport on roadways and dedicated tracks."@en ;
+    skos:broader cmpt:4 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:4.2 a skos:Concept ;
+    skos:prefLabel "Utility & Service Lines"@en ;
+    skos:notation "4.2" ;
+    skos:definition "Transport of energy & resources."@en ;
+    skos:broader cmpt:4 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:4.3 a skos:Concept ;
+    skos:prefLabel "Shipping Lanes"@en ;
+    skos:notation "4.3" ;
+    skos:definition "Transport on and in freshwater and ocean waterways."@en ;
+    skos:broader cmpt:4 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:4.4 a skos:Concept ;
+    skos:prefLabel "Atmospheric & Space Activities"@en ;
+    skos:notation "4.4" ;
+    skos:definition "Air and space transport and other activities."@en ;
+    skos:broader cmpt:4 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:4.5 a skos:Concept ;
+    skos:prefLabel "Fencing & Walls"@en ;
+    skos:notation "4.5" ;
+    skos:definition "Barriers to movement."@en ;
+    skos:broader cmpt:4 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:B a skos:Concept ;
+    skos:prefLabel "Use / Management of Species & Ecosystems"@en ;
+    skos:notation "B" ;
+    skos:definition "Human uses of biotic resources and disturbance from human presence or management actions in natural systems."@en ;
+    skos:topConceptOf cmpt:ThreatScheme .
+
+cmpt:5 a skos:Concept ;
+    skos:prefLabel "Biological Resource Use & Control"@en ;
+    skos:notation "5" ;
+    skos:definition "Consumptive use of \"wild\" biological resources including deliberate and unintentional harvesting effects as well as persecution of specific species."@en ;
+    skos:broader cmpt:B ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:5.1 a skos:Concept ;
+    skos:prefLabel "Hunting, Collecting & Controlling Terrestrial Animals"@en ;
+    skos:notation "5.1" ;
+    skos:definition "Hunting or trapping terrestrial wild animals for commercial, recreation, subsistence, research, or cultural purposes, or killing them for persecution or control reasons; includes non-lethal animal product harvesting and accidental mortality/bycatch."@en ;
+    skos:broader cmpt:5 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:5.2 a skos:Concept ;
+    skos:prefLabel "Gathering, Harvesting & Controlling Terrestrial Plants & Fungi"@en ;
+    skos:notation "5.2" ;
+    skos:definition "Harvesting plants, fungi, and other non-timber/non-animal products for commercial, recreation, subsistence, research, or cultural purposes, or persecution or control reasons; includes non-lethal product harvesting and accidental mortality/bycatch."@en ;
+    skos:broader cmpt:5 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:5.3 a skos:Concept ;
+    skos:prefLabel "Logging, Harvesting & Controlling Trees"@en ;
+    skos:notation "5.3" ;
+    skos:definition "Harvesting trees and other woody vegetation for timber, fiber, or fuel, including site preparation and other forestry management practices; includes non-lethal coppicing and accidental mortality/bycatch."@en ;
+    skos:broader cmpt:5 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:5.4 a skos:Concept ;
+    skos:prefLabel "Fishing, Harvesting & Controlling Aquatic Species"@en ;
+    skos:notation "5.4" ;
+    skos:definition "Harvesting aquatic wild animals or plants for commercial, recreation, subsistence, research, or cultural purposes, or persecution or control reasons; includes non-lethal product harvesting and accidental mortality/bycatch."@en ;
+    skos:broader cmpt:5 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:6 a skos:Concept ;
+    skos:prefLabel "Human Intrusions & Disturbances"@en ;
+    skos:notation "6" ;
+    skos:definition "Human activities that alter, disturb, and destroy ecosystems and species associated with non-consumptive uses of biological areas and resources."@en ;
+    skos:broader cmpt:B ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:6.1 a skos:Concept ;
+    skos:prefLabel "Recreational Activities"@en ;
+    skos:notation "6.1" ;
+    skos:definition "People spending time in natural areas or traveling in vehicles outside of established transport corridors, usually for recreational reasons."@en ;
+    skos:broader cmpt:6 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:6.2 a skos:Concept ;
+    skos:prefLabel "Conflict, Civil Unrest & Security Activities"@en ;
+    skos:notation "6.2" ;
+    skos:definition "Actions in natural areas by formal or paramilitary forces without a permanent footprint."@en ;
+    skos:broader cmpt:6 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:6.3 a skos:Concept ;
+    skos:prefLabel "Other Human Disturbances"@en ;
+    skos:notation "6.3" ;
+    skos:definition "People spending time in or traveling in natural environments for reasons other than recreation or conflict/security activities"@en ;
+    skos:broader cmpt:6 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:7 a skos:Concept ;
+    skos:prefLabel "Natural System Management & Modifications"@en ;
+    skos:notation "7" ;
+    skos:definition "Human actions that modify ecosystem structures, composition, or regimes, generally to deliberately improve human welfare or benefit certain species. This category includes both construction of permanent or long-term structures and their operations as well as more transitory management practices."@en ;
+    skos:broader cmpt:B ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:7.1 a skos:Concept ;
+    skos:prefLabel "Fire & Fire Management"@en ;
+    skos:notation "7.1" ;
+    skos:definition "Management actions that either suppress or increase fire frequency and/or intensity."@en ;
+    skos:broader cmpt:7 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:7.2 a skos:Concept ;
+    skos:prefLabel "Dams & Water Management / Use"@en ;
+    skos:notation "7.2" ;
+    skos:definition "Management actions that modify water levels, flows, and chemistry."@en ;
+    skos:broader cmpt:7 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:7.3 a skos:Concept ;
+    skos:prefLabel "Earth & Sediment Management"@en ;
+    skos:notation "7.3" ;
+    skos:definition "Management actions that modify the geophysical environment and/or change sediment regimes."@en ;
+    skos:broader cmpt:7 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:7.4 a skos:Concept ;
+    skos:prefLabel "Weather & Climate Management"@en ;
+    skos:notation "7.4" ;
+    skos:definition "Management actions that modify atmospheric structure and processes."@en ;
+    skos:broader cmpt:7 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:7.5 a skos:Concept ;
+    skos:prefLabel "Biological System Management"@en ;
+    skos:notation "7.5" ;
+    skos:definition "Management actions that modify biotic systems including conservation actions that may have detrimental impacts on other non-targeted species or ecosystems."@en ;
+    skos:broader cmpt:7 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:7.6 a skos:Concept ;
+    skos:prefLabel "Removing / Reducing Human Management"@en ;
+    skos:notation "7.6" ;
+    skos:definition "Absence or reduction of current or historical management regimes important for maintaining desired key ecological attributes of ecosystems or species. Includes regimes historically maintained by protected area staff, farmers and ranchers, indigenous peoples, private landowners, or any other resource manager."@en ;
+    skos:broader cmpt:7 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:C a skos:Concept ;
+    skos:prefLabel "Additional Sources of Stress"@en ;
+    skos:notation "C" ;
+    skos:definition "Stressors in natural systems that have been altered by the effects of current or historical human actions."@en ;
+    skos:topConceptOf cmpt:ThreatScheme .
+
+cmpt:8 a skos:Concept ;
+    skos:prefLabel "Invasive / Other Problematic Species, Genes & Pathogens"@en ;
+    skos:notation "8" ;
+    skos:definition "Threats from non-native and native plants, animals, pathogens/microbes, or genetic materials that have or are predicted to have harmful effects on biodiversity following their introduction, spread and/or increase in abundance or virulence."@en ;
+    skos:broader cmpt:C ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:8.1 a skos:Concept ;
+    skos:prefLabel "Invasive Non-Native / Alien Species"@en ;
+    skos:notation "8.1" ;
+    skos:definition "Harmful plants, animals, and other species not originally found within the ecosystem(s) in question and directly or indirectly introduced and spread into it by human activities."@en ;
+    skos:broader cmpt:8 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:8.2 a skos:Concept ;
+    skos:prefLabel "Problematic Native Species"@en ;
+    skos:notation "8.2" ;
+    skos:definition "Harmful plants, animals, and other species that are originally found within the ecosystem(s) in question, but have become “out-of-balance” or “released” directly or indirectly due to human activities."@en ;
+    skos:broader cmpt:8 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:8.3 a skos:Concept ;
+    skos:prefLabel "Introduced Genetic Material"@en ;
+    skos:notation "8.3" ;
+    skos:definition "Human caused introduction of natural or synthetic genes into species in natural ecosystems."@en ;
+    skos:broader cmpt:8 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:8.4 a skos:Concept ;
+    skos:prefLabel "Pathogens"@en ;
+    skos:notation "8.4" ;
+    skos:definition "Harmful native and non-native agents that cause disease or illness to a host species, including bacteria, viruses, prions, fungi, and other microorganisms."@en ;
+    skos:broader cmpt:8 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:9 a skos:Concept ;
+    skos:prefLabel "Pollution"@en ;
+    skos:notation "9" ;
+    skos:definition "Introduction of exotic and/or excess materials or energy from point and nonpoint sources."@en ;
+    skos:broader cmpt:C ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:9.1 a skos:Concept ;
+    skos:prefLabel "Water-Borne & Other Effluent Pollution"@en ;
+    skos:notation "9.1" ;
+    skos:definition "Water-borne and other liquid pollutants stemming from various human activities; includes both the effects of these pollutants on the sites where they are generated/applied and where they end up in the environment."@en ;
+    skos:broader cmpt:9 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:9.2 a skos:Concept ;
+    skos:prefLabel "Garbage & Solid Waste"@en ;
+    skos:notation "9.2" ;
+    skos:definition "Rubbish and other solid materials including those that entangle wildlife."@en ;
+    skos:broader cmpt:9 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:9.3 a skos:Concept ;
+    skos:prefLabel "Air-Borne Pollutants"@en ;
+    skos:notation "9.3" ;
+    skos:definition "Atmospheric pollutants from point and nonpoint sources."@en ;
+    skos:broader cmpt:9 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:9.4 a skos:Concept ;
+    skos:prefLabel "Energy Emissions"@en ;
+    skos:notation "9.4" ;
+    skos:definition "Inputs of heat, sound, light, or other wave energy that disturb species or ecosystems."@en ;
+    skos:broader cmpt:9 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:10 a skos:Concept ;
+    skos:prefLabel "Natural Disasters"@en ;
+    skos:notation "10" ;
+    skos:definition "Potentially catastrophic natural disturbances that conservation practitioners may still need to consider, particularly when managing small and/or remnant species populations or ecosystems."@en ;
+    skos:broader cmpt:C ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:10.1 a skos:Concept ;
+    skos:prefLabel "Geological Events"@en ;
+    skos:notation "10.1" ;
+    skos:definition "Specific geological events that have potentially catastrophic effects on vulnerable species and ecosystems."@en ;
+    skos:broader cmpt:10 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:10.2 a skos:Concept ;
+    skos:prefLabel "Severe Weather Events"@en ;
+    skos:notation "10.2" ;
+    skos:definition "Specific weather events that have potentially catastrophic effects on vulnerable species and ecosystems."@en ;
+    skos:broader cmpt:10 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:11 a skos:Concept ;
+    skos:prefLabel "Climate Change"@en ;
+    skos:notation "11" ;
+    skos:definition "Change in climate patterns resulting from increased atmospheric greenhouse gasses."@en ;
+    skos:broader cmpt:C ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:11.1 a skos:Concept ;
+    skos:prefLabel "Changes in Physical & Chemical Regimes"@en ;
+    skos:notation "11.1" ;
+    skos:definition "Broad-scale changes in the abiotic conditions of ecosystems."@en ;
+    skos:broader cmpt:11 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:11.2 a skos:Concept ;
+    skos:prefLabel "Changes in Temperature Regimes"@en ;
+    skos:notation "11.2" ;
+    skos:definition "Broad-scale changes in temperature mean, variability, seasonality and extremes, including changes in temperature extremes, increased average summer temperature, and decreased minimum winter/spring temperature."@en ;
+    skos:broader cmpt:11 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:11.3 a skos:Concept ;
+    skos:prefLabel "Changes in Precipitation & Hydrological Regimes"@en ;
+    skos:notation "11.3" ;
+    skos:definition "Broad-scale changes in precipitation mean, variability, seasonality, and extremes, including decreased or increased precipitation, changes in timing of precipitation, changes in form of precipitation (eg snow vs rain), changes in evapotranspiration rates and hydrological cycles, and droughts and floods."@en ;
+    skos:broader cmpt:11 ;
+    skos:inScheme cmpt:ThreatScheme .
+
+cmpt:12 a skos:Concept ;
+    skos:prefLabel "Unknown Threats"@en ;
+    skos:notation "12" ;
+    skos:definition "Threats that cannot be identified."@en ;
+    skos:broader cmpt:C ;
+    skos:inScheme cmpt:ThreatScheme .

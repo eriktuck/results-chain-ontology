@@ -1,0 +1,15 @@
+[project]
+name = "conservation-kg"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "bs4>=0.0.2",
+    "dotenv>=0.9.9",
+    "ipykernel>=7.1.0",
+    "pandas>=2.3.3",
+    "pyshacl>=0.31.0",
+    "rdflib>=7.5.0",
+    "requests>=2.32.5",
+]

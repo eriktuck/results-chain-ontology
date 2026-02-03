@@ -1,0 +1,318 @@
+@prefix cmpa: <https://conservationstandards.org/library-item/actions-classification#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://conservationstandards.org/library-item/actions-classification/> a owl:Ontology ;
+    rdfs:label "CMP Actions Classification v2.0 (Ontology)"@en ;
+    owl:versionInfo "2.0" ;
+    dcterms:description "Machine-readable SKOS representation of the CMP Actions Taxonomy."@en .
+
+cmpa:ActionScheme a skos:ConceptScheme ;
+    rdfs:label "CMP Actions Classification v2.0"@en .
+
+# Custom addition for crosswalk compatibility
+cmpa:OTHER a skos:Concept ;
+    skos:prefLabel "UNCLASSIFIED / OTHER"@en ;
+    skos:notation "OTHER" ;
+    skos:definition "Catch-all category for unclassified actions."@en ;
+    skos:topConceptOf cmpa:ActionScheme .
+
+cmpa:A a skos:Concept ;
+    skos:prefLabel "TARGET RESTORATION / STRESS REDUCTION ACTIONS"@en ;
+    skos:notation "A" ;
+    skos:definition "Actions to directly restore a target or mitigate a stress"@en ;
+    skos:topConceptOf cmpa:ActionScheme .
+
+cmpa:1 a skos:Concept ;
+    skos:prefLabel "Land / Water Management"@en ;
+    skos:notation "1" ;
+    skos:definition "Actions directly managing or restoring sites, ecosystems and the wider environment"@en ;
+    skos:broader cmpa:A ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:1.1 a skos:Concept ;
+    skos:prefLabel "Site/Area Stewardship"@en ;
+    skos:notation "1.1" ;
+    skos:definition "Enhancing viability / mitigating stresses for sites and/or ecosystem targets, especially on a smaller scale"@en ;
+    skos:broader cmpa:1 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:1.2 a skos:Concept ;
+    skos:prefLabel "Ecosystem & Natural Process (Re)Creation"@en ;
+    skos:notation "1.2" ;
+    skos:definition "Restoring missing or severely degraded ecosystems and ecosystem functions and processes, especially on a large scale"@en ;
+    skos:broader cmpa:1 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:2 a skos:Concept ;
+    skos:prefLabel "Species Management"@en ;
+    skos:notation "2" ;
+    skos:definition "Actions directly managing or restoring specific species or taxonomic groups"@en ;
+    skos:broader cmpa:A ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:2.1 a skos:Concept ;
+    skos:prefLabel "Species Stewardship"@en ;
+    skos:notation "2.1" ;
+    skos:definition "Enhancing viability of / mitigating stresses to specific taxa within their current range"@en ;
+    skos:broader cmpa:2 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:2.2 a skos:Concept ;
+    skos:prefLabel "Species Re-Introduction & Translocation"@en ;
+    skos:notation "2.2" ;
+    skos:definition "Transferring species or genetic material to places where they formerly occurred or to suitable future habitat or benign introductions of species to an ecosystem"@en ;
+    skos:broader cmpa:2 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:2.3 a skos:Concept ;
+    skos:prefLabel "Ex-Situ Conservation"@en ;
+    skos:notation "2.3" ;
+    skos:definition "Protecting specific taxa in artificial settings with the aim of ultimately restoring them to their natural settings"@en ;
+    skos:broader cmpa:2 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:B a skos:Concept ;
+    skos:prefLabel "BEHAVORIAL CHANGE / THREAT REDUCTION ACTIONS"@en ;
+    skos:notation "B" ;
+    skos:definition "Actions to reduce direct threats or increase positive behaviors"@en ;
+    skos:topConceptOf cmpa:ActionScheme .
+
+cmpa:3 a skos:Concept ;
+    skos:prefLabel "Awareness Raising"@en ;
+    skos:notation "3" ;
+    skos:definition "Actions making people aware of key issues and/or feeling desired emotions, leading to behavior change"@en ;
+    skos:broader cmpa:B ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:3.1 a skos:Concept ;
+    skos:prefLabel "Outreach & Communications"@en ;
+    skos:notation "3.1" ;
+    skos:definition "Promoting desired awareness and/or emotions and subsequent behavior change by providing information to target audiences through appropriate channels"@en ;
+    skos:broader cmpa:3 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:3.2 a skos:Concept ;
+    skos:prefLabel "Protests & Civil Disobedience"@en ;
+    skos:notation "3.2" ;
+    skos:definition "Promoting desired awareness and subsequent desired behavior change by conducting protests, naming and shaming, civil disobedience, or sabotage activities"@en ;
+    skos:broader cmpa:3 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:4 a skos:Concept ;
+    skos:prefLabel "Law Enforcement & Prosecution"@en ;
+    skos:notation "4" ;
+    skos:definition "Actions monitoring and enforcing compliance with existing laws and policies at all levels to deter threats or compel conservation action"@en ;
+    skos:broader cmpa:B ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:4.1 a skos:Concept ;
+    skos:prefLabel "Detection & Arrest"@en ;
+    skos:notation "4.1" ;
+    skos:definition "Detecting, directly stopping, and/or deterring violations of existing laws and policies"@en ;
+    skos:broader cmpa:4 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:4.2 a skos:Concept ;
+    skos:prefLabel "Criminal Prosecution & Conviction"@en ;
+    skos:notation "4.2" ;
+    skos:definition "Ensuring appropriate application of sanctions for violations of existing laws and policies"@en ;
+    skos:broader cmpa:4 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:4.3 a skos:Concept ;
+    skos:prefLabel "Non-Criminal Legal Action"@en ;
+    skos:notation "4.3" ;
+    skos:definition "Threatening or bringing non-criminal legal action to get individuals, organizations, agencies or firms to change or deter undesired behaviors or compel conservation action"@en ;
+    skos:broader cmpa:4 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:5 a skos:Concept ;
+    skos:prefLabel "Livelihood, Economic & Moral Incentives"@en ;
+    skos:notation "5" ;
+    skos:definition "Actions using livelihood, other economic and moral incentives to directly influence attitudes and behaviors"@en ;
+    skos:broader cmpa:B ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:5.1 a skos:Concept ;
+    skos:prefLabel "Linked Enterprises & Alternative Livelihoods"@en ;
+    skos:notation "5.1" ;
+    skos:definition "Developing enterprises that directly depend on the maintenance of natural resources or provide substitute livelihoods as a means of changing attitudes and behaviors"@en ;
+    skos:broader cmpa:5 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:5.2 a skos:Concept ;
+    skos:prefLabel "Better Products & Management Practices"@en ;
+    skos:notation "5.2" ;
+    skos:definition "Developing, promoting and/or providing more environmentally-friendly products or practices that substitute for environmentally damaging ones"@en ;
+    skos:broader cmpa:5 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:5.3 a skos:Concept ;
+    skos:prefLabel "Market-Based Incentives"@en ;
+    skos:notation "5.3" ;
+    skos:definition "Using market mechanisms to change behaviors and attitudes"@en ;
+    skos:broader cmpa:5 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:5.4 a skos:Concept ;
+    skos:prefLabel "Direct Economic Incentives"@en ;
+    skos:notation "5.4" ;
+    skos:definition "Using direct or indirect payments or ascribing economic value to change behaviors and attitudes"@en ;
+    skos:broader cmpa:5 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:5.5 a skos:Concept ;
+    skos:prefLabel "Non-Monetary Values"@en ;
+    skos:notation "5.5" ;
+    skos:definition "Using intangible and moral values to change behaviors and attitudes"@en ;
+    skos:broader cmpa:5 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:C a skos:Concept ;
+    skos:prefLabel "ENABLING CONDITION ACTIONS"@en ;
+    skos:notation "C" ;
+    skos:definition "Actions to create the conditions necessary for other conservation efforts to succeed"@en ;
+    skos:topConceptOf cmpa:ActionScheme .
+
+cmpa:6 a skos:Concept ;
+    skos:prefLabel "Conservation Designation & Planning"@en ;
+    skos:notation "6" ;
+    skos:definition "Actions directly protecting sites and/or species"@en ;
+    skos:broader cmpa:C ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:6.1 a skos:Concept ;
+    skos:prefLabel "Protected Area Designation &/or Acquisition"@en ;
+    skos:notation "6.1" ;
+    skos:definition "Legally or formally establishing or expanding public or private parks, reserves, and other protected areas roughly equivalent to IUCN Categories I-IV"@en ;
+    skos:broader cmpa:6 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:6.2 a skos:Concept ;
+    skos:prefLabel "Easements & Resource Rights"@en ;
+    skos:notation "6.2" ;
+    skos:definition "Legally or formally establishing protection of some specific aspect of the natural resources on public or private lands"@en ;
+    skos:broader cmpa:6 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:6.3 a skos:Concept ;
+    skos:prefLabel "Land/Water Use Zoning & Designation"@en ;
+    skos:notation "6.3" ;
+    skos:definition "Designating land/water uses or designating conservation areas outside of IUCN Categories I-IV"@en ;
+    skos:broader cmpa:6 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:6.4 a skos:Concept ;
+    skos:prefLabel "Conservation Planning"@en ;
+    skos:notation "6.4" ;
+    skos:definition "Planning for management of sites, species, or thematic conservation projects"@en ;
+    skos:broader cmpa:6 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:6.5 a skos:Concept ;
+    skos:prefLabel "Site Infrastructure"@en ;
+    skos:notation "6.5" ;
+    skos:definition "Building or maintaining the physical infrastructure for protected areas and other conservation sites"@en ;
+    skos:broader cmpa:6 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:7 a skos:Concept ;
+    skos:prefLabel "Legal & Policy Frameworks"@en ;
+    skos:notation "7" ;
+    skos:definition "Actions developing and influencing legislation, policies and voluntary standards affecting conservation"@en ;
+    skos:broader cmpa:C ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:7.1 a skos:Concept ;
+    skos:prefLabel "Laws, Regulations & Codes"@en ;
+    skos:notation "7.1" ;
+    skos:definition "Creating, amending, or influencing laws, regulations and codes at all levels"@en ;
+    skos:broader cmpa:7 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:7.2 a skos:Concept ;
+    skos:prefLabel "Policies & Guidelines"@en ;
+    skos:notation "7.2" ;
+    skos:definition "Creating, amending, or influencing policies and guidelines at all levels"@en ;
+    skos:broader cmpa:7 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:8 a skos:Concept ;
+    skos:prefLabel "Research & Monitoring"@en ;
+    skos:notation "8" ;
+    skos:definition "Actions collecting data and transforming it into information to support conservation work"@en ;
+    skos:broader cmpa:C ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:8.1 a skos:Concept ;
+    skos:prefLabel "Basic Research & Status Monitoring"@en ;
+    skos:notation "8.1" ;
+    skos:definition "Collecting, managing and analyzing data and creating information about any conservation-related factors"@en ;
+    skos:broader cmpa:8 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:8.2 a skos:Concept ;
+    skos:prefLabel "Evaluation, Effectiveness Measures & Learning"@en ;
+    skos:notation "8.2" ;
+    skos:definition "Assessing and learning about the effectiveness of conservation work"@en ;
+    skos:broader cmpa:8 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:9 a skos:Concept ;
+    skos:prefLabel "Education & Training"@en ;
+    skos:notation "9" ;
+    skos:definition "Actions enhancing the knowledge and skills of specific individuals"@en ;
+    skos:broader cmpa:C ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:9.1 a skos:Concept ;
+    skos:prefLabel "Formal Education"@en ;
+    skos:notation "9.1" ;
+    skos:definition "Enhancing knowledge and skills of students in a formal degree program"@en ;
+    skos:broader cmpa:9 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:9.2 a skos:Concept ;
+    skos:prefLabel "Training & Individual Capacity Development"@en ;
+    skos:notation "9.2" ;
+    skos:definition "Enhancing knowledge, skills and information exchange for practitioners, stakeholders, and other relevant individuals in structured settings outside of degree programs"@en ;
+    skos:broader cmpa:9 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:10 a skos:Concept ;
+    skos:prefLabel "Institutional Development"@en ;
+    skos:notation "10" ;
+    skos:definition "Actions creating the institutions needed to support conservation work"@en ;
+    skos:broader cmpa:C ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:10.1 a skos:Concept ;
+    skos:prefLabel "Internal Organizational Management & Administration"@en ;
+    skos:notation "10.1" ;
+    skos:definition "The basic work needed to establish and operate conservation organizations"@en ;
+    skos:broader cmpa:10 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:10.2 a skos:Concept ;
+    skos:prefLabel "External Organizational Development & Support"@en ;
+    skos:notation "10.2" ;
+    skos:definition "Creating or providing non-financial support & capacity building for conservation organizations"@en ;
+    skos:broader cmpa:10 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:10.3 a skos:Concept ;
+    skos:prefLabel "Alliance & Partnership Development"@en ;
+    skos:notation "10.3" ;
+    skos:definition "Forming and facilitating partnerships, alliances, and networks of organizations"@en ;
+    skos:broader cmpa:10 ;
+    skos:inScheme cmpa:ActionScheme .
+
+cmpa:10.4 a skos:Concept ;
+    skos:prefLabel "Financing Conservation"@en ;
+    skos:notation "10.4" ;
+    skos:definition "Raising and providing funds for conservation work"@en ;
+    skos:broader cmpa:10 ;
+    skos:inScheme cmpa:ActionScheme .

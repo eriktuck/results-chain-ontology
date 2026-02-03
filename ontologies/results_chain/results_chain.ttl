@@ -1,0 +1,89 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rc: <http://example.org/ontology/results-chain#> .
+
+<http://example.org/ontology/results-chain/> a owl:Ontology ;
+    rdfs:label "Conservation Results Chain Ontology" ;
+    rdfs:comment "A simple ontology based on Margoluis et al. (2013) to represent Theories of Change in conservation." ;
+
+    owl:imports <https://conservationstandards.org/library-item/actions-classification/> ;
+    owl:imports <https://conservationstandards.org/library-item/threats-classification/> ;
+    owl:imports <https://www.conservationevidence.com/actions/Ontology> ;
+#    owl:imports <http://purl.obolibrary.org/obo/envo.owl> ;
+#    owl:imports <http://metadata.un.org/thesaurus/> ;
+    owl:imports <http://metadata.un.org/sdg/ontology> ;
+    owl:imports <http://metadata.un.org/sdg/> ;
+    owl:imports <http://metadata.un.org/mappings/sdg-subjects> ;
+    
+    owl:imports <http://example.org/mappings/ce-to-cmp> ;
+    owl:imports <http://example.org/mappings/envo-to-unbis> .
+
+#################################################################
+#    Classes
+#################################################################
+
+rc:Strategy a owl:Class ;
+    rdfs:label "Strategy" ;
+    rdfs:comment "The set of actions or interventions that a project implements. Map to CMP Actions or Conservation Evidence Actions." .
+
+rc:Result a owl:Class ;
+    rdfs:label "Result" ;
+    rdfs:comment "A generic term used to describe the desired future state of a factor. Includes intermediate outcomes." .
+
+rc:ThreatReductionResult a owl:Class ;
+    rdfs:subClassOf rc:Result ;
+    rdfs:label "Threat Reduction Result" ;
+    rdfs:comment "A specific result where a direct threat is diminished. Map to CMP Threats." .
+
+rc:Impact a owl:Class ;
+    rdfs:label "Impact" ;
+    rdfs:comment "The desired future state of a conservation target (e.g., species, habitat). Map to ENVO." .
+
+rc:Context a owl:Class ;
+    rdfs:label "Context" ;
+    rdfs:comment "The external environment, including geographic locations and institutional entities. Populate via Wikifiers (Wikidata/DBpedia)." .
+
+rc:Indicator a owl:Class ;
+    rdfs:label "Indicator" ;
+    rdfs:comment "The specific variable used to measure progress toward a result or impact. Map to UNBIS." .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+rc:leadsTo a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:label "leads to" ;
+    rdfs:comment "The causal or logical link between a strategy and a result, or between results." ;
+    rdfs:domain [ a owl:Class ; owl:unionOf (rc:Strategy rc:Result) ] ;
+    rdfs:range [ a owl:Class ; owl:unionOf (rc:Result rc:Impact) ] .
+
+rc:addresses a owl:ObjectProperty ;
+    rdfs:label "addresses" ;
+    rdfs:comment "Links a strategy directly to the threat it intends to mitigate." ;
+    rdfs:domain rc:Strategy ;
+    rdfs:range rc:ThreatReductionResult .
+
+rc:occursIn a owl:ObjectProperty ;
+    rdfs:label "occurs in" ;
+    rdfs:comment "Links a component of the results chain to a specific geographic or institutional context." ;
+    rdfs:domain [ a owl:Class ; owl:unionOf (rc:Strategy rc:Result rc:Impact) ] ;
+    rdfs:range rc:Context .
+
+rc:hasIndicator a owl:ObjectProperty ;
+    rdfs:label "has indicator" ;
+    rdfs:comment "Links a result or impact to a specific measurable indicator." ;
+    rdfs:domain [ a owl:Class ; owl:unionOf (rc:Result rc:Impact) ] ;
+    rdfs:range rc:Indicator .
+
+#################################################################
+#    Annotations for External Mappings
+#################################################################
+
+rc:Strategy skos:note "Align with CMP Action Taxonomy via skos:exactMatch" .
+rc:ThreatReductionResult skos:note "Align with CMP Threat Taxonomy via skos:related" .
+rc:Impact skos:note "Align with ENVO via skos:narrowMatch" .
+rc:Context skos:note "Align with Wikidata/DBpedia URIs via owl:sameAs" .
+rc:Indicator skos:note "Align with UNBIS Thesaurus via skos:related" .

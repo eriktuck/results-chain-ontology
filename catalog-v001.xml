@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    
+    <!-- Map ontologies/ -->
+    <uri name="http://example.org/ontology/results-chain" uri="ontologies/results_chain/results_chain.ttl"/>
+    
+    <!-- Remap sources/ to local files-->
+    <uri name="http://metadata.un.org/sdg/ontology" uri="sources/LOD4Stats/sdgs-ontology.ttl"/>
+    <uri name="http://metadata.un.org/sdg/" uri="sources/LOD4Stats/sdg-kos-goals-targets-indicators.ttl"/>
+    <uri name="http://metadata.un.org/mappings/sdg-subjects" uri="sources/LOD4Stats/sdg-kos-subject-mappings.ttl"/>
+
+    <uri name="http://purl.obolibrary.org/obo/envo.owl" uri="sources/envo/envo.owl"/>
+
+    <uri name="http://metadata.un.org/thesaurus/" uri="sources/unbis/unbis_thesaurus.ttl"/>
+
+    <uri name="https://conservationstandards.org/library-item/actions-classification/" uri="sources/cmp/actions/cmp_actions_2.0.ttl"/>
+    <uri name="https://conservationstandards.org/library-item/threats-classification/" uri="sources/cmp/threats/cmp_threats_4.0.ttl"/>
+
+    <uri name="https://www.conservationevidence.com/actions/Ontology" uri="sources/conservation_evidence/ce_taxonomy.ttl"/>
+
+    <!-- Map mappings/ -->
+    <uri name="http://example.org/mappings/envo-to-unbis" uri="mappings/envo_to_unbis/envo_to_unbis_crosswalk.ttl"/>
+    <uri name="http://example.org/mappings/ce-to-cmp" uri="mappings/ce_to_cmp/ce_to_cmp2_crosswalk.ttl"/>
+
+</catalog>
