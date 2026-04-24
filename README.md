@@ -2,6 +2,8 @@
 
 This directory contains the formal RDF/OWL implementation of the **Results Chain** framework used to model causal logic in global conservation.
 
+Find the WebVOWL [here](https://eriktuck.github.io/results-chain-ontology/webvowl/index.html).
+
 ## Theoretical Foundation
 
 This ontology is a technical translation of the conceptual framework established by **Margoluis et al. (2013)**. It provides a machine-readable structure to map how specific strategies lead to threat reduction and, ultimately, biodiversity impact.
