@@ -17,3 +17,4 @@ robot
 merged_results_chain.ttldocs/
 output/
 docs/
+tmp*
