@@ -101,11 +101,33 @@ merge: setup
 	@echo "Merging completed."
 
 # Create Documentation
-documentation: merge
+.PHONY: docs
+docs: merge setup
+	@echo "Converting Markdown to HTML fragments..."
+	@mkdir -p sections
+	pandoc markdown/abstract.md -o sections/abstract-en.html
+	pandoc markdown/introduction.md -o sections/introduction-en.html
 	@echo "Running Widoco..."
 	java -Xmx8g -jar $(WIDOCO) \
 		-ontFile merged_results_chain.ttl \
-		-outFolder ./docs \
+		-outFolder ./output \
+		-confFile widoco.conf \
 		-rewriteAll \
 		-webVowl \
-		-includeImportedOntologies
+		-oops
+	@echo "Flattening structure for GitHub Pages root..."
+	find output/* -maxdepth 0 -not -name 'doc' -exec rm -rf {} +
+	cp -rl output/doc/* output/
+	rm -rf output/doc/
+	mv output/index-en.html output/index.html
+	@echo "Documentation generated in ./output"
+
+# Deploy to GitHub Pages
+.PHONY: deploy
+deploy: docs
+	@echo "Pushing to gh-pages branch..."
+	cd output && \
+	git add . && \
+	git commit -m "Site update: $$(date)" && \
+	git push origin gh-pages
+	@echo "🚀 Documentation published to GitHub Pages!"
