@@ -103,10 +103,6 @@ merge: setup
 # Create Documentation
 .PHONY: docs
 docs: merge setup
-	@echo "Converting Markdown to HTML fragments..."
-	@mkdir -p sections
-	pandoc markdown/abstract.md -o sections/abstract-en.html
-	pandoc markdown/introduction.md -o sections/introduction-en.html
 	@echo "Running Widoco..."
 	java -Xmx8g -jar $(WIDOCO) \
 		-ontFile merged_results_chain.ttl \

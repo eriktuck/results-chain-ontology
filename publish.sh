@@ -1,7 +1,7 @@
 #!/bin/bash
-
-pandoc markdown/abstract.md -o sections/abstract-en.html
-pandoc markdown/introduction.md -o sections/introduction-en.html
+mkdir -p output/metadata
+cp sections/abstract-en.html output/sections/abstract-en.html
+cp sections/introduction-en.html output/sections/introduction-en.html
 
 java -jar widoco.jar -ontFile ./merged_results_chain.ttl -outFolder ./output -confFile widoco.conf -rewriteAll -webVowl -oops
 
