@@ -2,7 +2,7 @@
 
 This directory contains the formal RDF/OWL implementation of the **Results Chain** framework used to model causal logic in global conservation.
 
-Find the WebVOWL [here](https://eriktuck.github.io/results-chain-ontology/webvowl/index.html).
+Read the [documentation](https://eriktuck.github.io/results-chain-ontology/) or find the WebVOWL [here](https://eriktuck.github.io/results-chain-ontology/webvowl/index.html).
 
 ## Theoretical Foundation
 
