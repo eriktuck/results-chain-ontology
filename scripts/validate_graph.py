@@ -8,7 +8,7 @@ shacl_shapes = "ontologies/shapes/results_chain_shapes.shacl.ttl"
 # - "Project_A" is valid.
 # - "Project_B" is invalid because Strategy has no skos:exactMatch and Impact has no indicator.
 sample_data = """
-@prefix rc: <http://example.org/ontology/results-chain#> .
+@prefix rc: <https://eriktuck.github.io/results-chain-ontology#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix ex: <http://example.org/data#> .
 

@@ -1,10 +1,10 @@
-@prefix doc: <http://example.org/ontology/documents#> .
+@prefix doc: <https://eriktuck.github.io/results-chain-ontology/ontology/documents#> .
 @prefix schema: <http://schema.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/ontology/documents> a owl:Ontology ;
+<https://eriktuck.github.io/results-chain-ontology/ontology/documents> a owl:Ontology ;
     rdfs:label "Simplified Document Metadata Ontology" .
 
 #################################################################

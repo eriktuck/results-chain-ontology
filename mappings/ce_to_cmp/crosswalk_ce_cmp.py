@@ -109,7 +109,7 @@ def generate_bridge_ttl(mappings):
         "@prefix dcterms: <http://purl.org/dc/terms/> .",
         "@prefix cmpa: <https://conservationstandards.org/library-item/actions-classification#> .",
         "",
-        "<http://example.org/mappings/ce-to-cmp> a owl:Ontology ;",
+        "<https://eriktuck.github.io/results-chain-ontology/mappings/ce-to-cmp> a owl:Ontology ;",
         "    rdfs:label \"Crosswalk: Conservation Evidence to CMP Actions v2.0\"@en ;",
         "    dcterms:description \"Mappings between Conservation Evidence interventions and the CMP v2.0 Actions Taxonomy.\"@en ;",
         "    owl:versionInfo \"1.0\" ;",

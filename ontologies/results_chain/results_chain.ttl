@@ -3,9 +3,9 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix rc: <http://example.org/ontology/results-chain#> .
+@prefix rc: <https://eriktuck.github.io/results-chain-ontology#> .
 
-<http://example.org/ontology/results-chain/> a owl:Ontology ;
+<https://eriktuck.github.io/results-chain-ontology/> a owl:Ontology ;
     rdfs:label "Conservation Results Chain Ontology" ;
     rdfs:comment "A simple ontology based on Margoluis et al. (2013) to represent Theories of Change in conservation." ;
 
@@ -18,8 +18,8 @@
     owl:imports <http://metadata.un.org/sdg/> ;
     owl:imports <http://metadata.un.org/mappings/sdg-subjects> ;
     
-    owl:imports <http://example.org/mappings/ce-to-cmp> ;
-    owl:imports <http://example.org/mappings/envo-to-unbis> .
+    owl:imports <https://eriktuck.github.io/results-chain-ontology/mappings/ce-to-cmp> ;
+    owl:imports <https://eriktuck.github.io/results-chain-ontology/mappings/envo-to-unbis> .
 
 #################################################################
 #    Classes

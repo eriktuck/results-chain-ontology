@@ -4,7 +4,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
-<http://example.org/mappings/envo-to-unbis> a owl:Ontology ;
+<https://eriktuck.github.io/results-chain-ontology/mappings/envo-to-unbis> a owl:Ontology ;
   rdfs:label "Crosswalk: ENVO to UNBIS"@en ;
   dcterms:description "Manual crosswalk connecting ENVO environmental entities to UNBIS indicators."@en .
 #  owl:imports <http://purl.obolibrary.org/obo/envo.owl> ;
