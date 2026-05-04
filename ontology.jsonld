@@ -1,43 +1,43 @@
 [ {
-  "@id" : "_:genid1",
+  "@id" : "_:genid12",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://example.org/ontology/results-chain#Impact"
+      "@id" : "https://eriktuck.github.io/results-chain-ontology#Impact"
     }, {
-      "@id" : "http://example.org/ontology/results-chain#Result"
+      "@id" : "https://eriktuck.github.io/results-chain-ontology#Result"
+    }, {
+      "@id" : "https://eriktuck.github.io/results-chain-ontology#Strategy"
     } ]
   } ]
 }, {
-  "@id" : "_:genid10",
+  "@id" : "_:genid3",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://example.org/ontology/results-chain#Impact"
+      "@id" : "https://eriktuck.github.io/results-chain-ontology#Impact"
     }, {
-      "@id" : "http://example.org/ontology/results-chain#Result"
-    }, {
-      "@id" : "http://example.org/ontology/results-chain#Strategy"
+      "@id" : "https://eriktuck.github.io/results-chain-ontology#Result"
     } ]
   } ]
 }, {
-  "@id" : "_:genid4",
+  "@id" : "_:genid6",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://example.org/ontology/results-chain#Result"
+      "@id" : "https://eriktuck.github.io/results-chain-ontology#Result"
     }, {
-      "@id" : "http://example.org/ontology/results-chain#Strategy"
+      "@id" : "https://eriktuck.github.io/results-chain-ontology#Strategy"
     } ]
   } ]
 }, {
-  "@id" : "_:genid7",
+  "@id" : "_:genid9",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://example.org/ontology/results-chain#Impact"
+      "@id" : "https://eriktuck.github.io/results-chain-ontology#Impact"
     }, {
-      "@id" : "http://example.org/ontology/results-chain#Result"
+      "@id" : "https://eriktuck.github.io/results-chain-ontology#Result"
     } ]
   } ]
 }, {
@@ -490,163 +490,6 @@
 }, {
   "@id" : "http://eurovoc.europa.eu/c_4523e1dd",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
-}, {
-  "@id" : "http://example.org/ontology/results-chain#Context",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The external environment, including geographic locations and institutional entities. Populate via Wikifiers (Wikidata/DBpedia)."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Context"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#note" : [ {
-    "@value" : "Align with Wikidata/DBpedia URIs via owl:sameAs"
-  } ]
-}, {
-  "@id" : "http://example.org/ontology/results-chain#Impact",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The desired future state of a conservation target (e.g., species, habitat). Map to ENVO."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Impact"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#note" : [ {
-    "@value" : "Align with ENVO via skos:narrowMatch"
-  } ]
-}, {
-  "@id" : "http://example.org/ontology/results-chain#Indicator",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The specific variable used to measure progress toward a result or impact. Map to UNBIS."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Indicator"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#note" : [ {
-    "@value" : "Align with UNBIS Thesaurus via skos:related"
-  } ]
-}, {
-  "@id" : "http://example.org/ontology/results-chain#Result",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A generic term used to describe the desired future state of a factor. Includes intermediate outcomes."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Result"
-  } ]
-}, {
-  "@id" : "http://example.org/ontology/results-chain#Strategy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The set of actions or interventions that a project implements. Map to CMP Actions or Conservation Evidence Actions."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Strategy"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#note" : [ {
-    "@value" : "Align with CMP Action Taxonomy via skos:exactMatch"
-  } ]
-}, {
-  "@id" : "http://example.org/ontology/results-chain#ThreatReductionResult",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A specific result where a direct threat is diminished. Map to CMP Threats."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Threat Reduction Result"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://example.org/ontology/results-chain#Result"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#note" : [ {
-    "@value" : "Align with CMP Threat Taxonomy via skos:related"
-  } ]
-}, {
-  "@id" : "http://example.org/ontology/results-chain#addresses",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Links a strategy directly to the threat it intends to mitigate."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/ontology/results-chain#Strategy"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "addresses"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/ontology/results-chain#ThreatReductionResult"
-  } ]
-}, {
-  "@id" : "http://example.org/ontology/results-chain#hasIndicator",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Links a result or impact to a specific measurable indicator."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid1"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has indicator"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/ontology/results-chain#Indicator"
-  } ]
-}, {
-  "@id" : "http://example.org/ontology/results-chain#leadsTo",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The causal or logical link between a strategy and a result, or between results."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid4"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "leads to"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid7"
-  } ]
-}, {
-  "@id" : "http://example.org/ontology/results-chain#occursIn",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Links a component of the results chain to a specific geographic or institutional context."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid10"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "occurs in"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/ontology/results-chain#Context"
-  } ]
-}, {
-  "@id" : "http://example.org/ontology/results-chain/",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
-  "http://purl.org/dc/terms/abstract" : [ {
-    "@language" : "en",
-    "@value" : "The Conservation Results Chain Ontology provides a formal, machine-readable vocabulary for representing Theories of Change in the domain of biodiversity conservation. Based on the widely adopted framework by Margoluis et al. (2013), this ontology connects conservation actions to their intermediate results, threat reductions, and ultimate impacts. By semantically integrating standard classifications—such as the Conservation Measures Partnership (CMP) Actions and Threats, Conservation Evidence, and UN Sustainable Development Goals (SDGs)—this ontology enables interoperability, standardized monitoring, and evidence-based planning across diverse conservation projects."
-  } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "Erik Anderson"
-  } ],
-  "http://purl.org/dc/terms/license" : [ {
-    "@id" : "https://creativecommons.org/licenses/by/4.0/"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
-    "@value" : "Conservation Results Chain Ontology"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A simple ontology based on Margoluis et al. (2013) to represent Theories of Change in conservation."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Conservation Results Chain Ontology"
-  } ],
-  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "1.0.0"
-  } ]
 }, {
   "@id" : "http://metadata.un.org/sdg",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
@@ -31926,15 +31769,6 @@
     "@id" : "http://metadata.un.org/thesaurus/1002914"
   } ]
 }, {
-  "@id" : "http://purl.org/dc/terms/abstract",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://purl.org/dc/terms/creator",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://purl.org/dc/terms/license",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
   "@id" : "http://purl.org/dc/terms/subject",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -31943,9 +31777,6 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   } ]
-}, {
-  "@id" : "http://purl.org/dc/terms/title",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://schema.org/Dataset",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
@@ -34346,6 +34177,147 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "CMP Direct Threats Classification v4.0"
+  } ]
+}, {
+  "@id" : "https://eriktuck.github.io/results-chain-ontology#Context",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The external environment, including geographic locations and institutional entities. Populate via Wikifiers (Wikidata/DBpedia)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Context"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@value" : "Align with Wikidata/DBpedia URIs via owl:sameAs"
+  } ]
+}, {
+  "@id" : "https://eriktuck.github.io/results-chain-ontology#Impact",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The desired future state of a conservation target (e.g., species, habitat). Map to ENVO."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Impact"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@value" : "Align with ENVO via skos:narrowMatch"
+  } ]
+}, {
+  "@id" : "https://eriktuck.github.io/results-chain-ontology#Indicator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The specific variable used to measure progress toward a result or impact. Map to UNBIS."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Indicator"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@value" : "Align with UNBIS Thesaurus via skos:related"
+  } ]
+}, {
+  "@id" : "https://eriktuck.github.io/results-chain-ontology#Result",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A generic term used to describe the desired future state of a factor. Includes intermediate outcomes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Result"
+  } ]
+}, {
+  "@id" : "https://eriktuck.github.io/results-chain-ontology#Strategy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The set of actions or interventions that a project implements. Map to CMP Actions or Conservation Evidence Actions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Strategy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@value" : "Align with CMP Action Taxonomy via skos:exactMatch"
+  } ]
+}, {
+  "@id" : "https://eriktuck.github.io/results-chain-ontology#ThreatReductionResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A specific result where a direct threat is diminished. Map to CMP Threats."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Threat Reduction Result"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://eriktuck.github.io/results-chain-ontology#Result"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@value" : "Align with CMP Threat Taxonomy via skos:related"
+  } ]
+}, {
+  "@id" : "https://eriktuck.github.io/results-chain-ontology#addresses",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Links a strategy directly to the threat it intends to mitigate."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://eriktuck.github.io/results-chain-ontology#Strategy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "addresses"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://eriktuck.github.io/results-chain-ontology#ThreatReductionResult"
+  } ]
+}, {
+  "@id" : "https://eriktuck.github.io/results-chain-ontology#hasIndicator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Links a result or impact to a specific measurable indicator."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid3"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has indicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://eriktuck.github.io/results-chain-ontology#Indicator"
+  } ]
+}, {
+  "@id" : "https://eriktuck.github.io/results-chain-ontology#leadsTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The causal or logical link between a strategy and a result, or between results."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid6"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "leads to"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid9"
+  } ]
+}, {
+  "@id" : "https://eriktuck.github.io/results-chain-ontology#occursIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Links a component of the results chain to a specific geographic or institutional context."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid12"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "occurs in"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://eriktuck.github.io/results-chain-ontology#Context"
+  } ]
+}, {
+  "@id" : "https://eriktuck.github.io/results-chain-ontology/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A simple ontology based on Margoluis et al. (2013) to represent Theories of Change in conservation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Conservation Results Chain Ontology"
   } ]
 }, {
   "@id" : "https://www.conservationevidence.com/actions/1",
