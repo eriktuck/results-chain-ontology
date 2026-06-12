@@ -116,6 +116,9 @@ docs: merge setup
 	cp -rl output/doc/* output/
 	rm -rf output/doc/
 	mv output/index-en.html output/index.html
+	@echo "Copying abstract and introduction..."
+	cp sections/abstract-en.html output/sections/abstract-en.html
+	cp sections/introduction-en.html output/sections/introduction-en.html
 	@echo "Documentation generated in ./output"
 
 # Deploy to GitHub Pages

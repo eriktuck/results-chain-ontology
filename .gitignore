@@ -16,5 +16,6 @@ robot
 # Merged outputs
 merged_results_chain.ttldocs/
 output/
+output_test/
 docs/
 tmp*
