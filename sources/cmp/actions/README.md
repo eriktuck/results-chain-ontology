@@ -29,7 +29,7 @@ uv run python sources/cmp/actions/parse_cmp_actions.py
 The script performs the following steps:
 1.  **Extraction:** Reads the "Actions v 2.0" sheet.
 2.  **Hierarchy Mapping:** Maps the three-level hierarchy (e.g., `1. Land/Water Protection` -> `1.1 Site/Area Protection`) to `skos:narrower` relationships.
-3.  **URI Minting:** Generates stable URIs using the pattern: `https://conservationstandards.org/library-item/actions-classification/#`
+3.  **URI Minting:** Generates stable URIs using the pattern: `https://conservationstandards.org/library-item/actions-classification#`
 4.  **Metadata Enrichment:** 
     *   Maps "Action Category" to `skos:prefLabel`.
     *   Maps "Action Definition" to `skos:definition`.
@@ -37,7 +37,7 @@ The script performs the following steps:
 
 ## 4. Output: `cmp_actions_2.0.ttl`
 The resulting file is a **SKOS Concept Scheme**. 
-- **Base URI:** `ttps://conservationstandards.org/library-item/actions-classification/#`
+- **Base URI:** `https://conservationstandards.org/library-item/actions-classification#`
 - **Primary Class:** `skos:Concept`
 - **Interoperability:** This file is designed to be imported (via `owl:imports`) by the **Results Chain Ontology**. 
 

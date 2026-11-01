@@ -92,7 +92,7 @@ shrc:ImpactShape
         sh:severity sh:Warning ;
         sh:minCount 1 ;
         sh:nodeKind sh:IRI ;
-        sh:pattern "^(http://purl\\.obolibrary\\.org/obo/(ENVO|NCBITaxon)_|https://www\\.gbif\\.org/species/|http://www\\.wikidata\\.org/entity/Q)" ;
+        sh:pattern "^(https?://purl\\.obolibrary\\.org/obo/(ENVO|NCBITaxon)_|https?://(www\\.)?gbif\\.org/species/|https?://www\\.wikidata\\.org/(entity|wiki)/Q)" ;
     ] .
 
 #################################################################
@@ -137,6 +137,12 @@ shrc:OccursInShape
         sh:class rc:Context ;
     ] .
 
+shrc:HasTargetShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf rc:hasTarget ;
+    sh:class rc:Impact ;
+    sh:message "rc:hasTarget may only be used on an Impact." .
+
 #################################################################
 #    Provenance Shapes
 #################################################################
@@ -156,21 +162,24 @@ shrc:SupportingQuoteShape
     sh:targetSubjectsOf rc:supportingQuote ;
     sh:property [
         sh:path rc:supportingQuote ;
-        sh:description "An element or link has at most one supporting quote, as a string." ;
-        sh:datatype xsd:string ;
-        sh:maxCount 1 ;
-    ] ;
-    sh:property [
-        sh:path rc:quotePage ;
-        sh:description "The quote's page is a single integer, starting at 1." ;
-        sh:datatype xsd:integer ;
-        sh:minInclusive 1 ;
+        sh:description "An element or link has at most one supporting quote, as a string (optionally language-tagged)." ;
+        sh:or (
+            [ sh:datatype xsd:string ]
+            [ sh:datatype rdf:langString ]
+        ) ;
         sh:maxCount 1 ;
     ] .
 
 shrc:QuotePageShape
     a sh:NodeShape ;
     sh:targetSubjectsOf rc:quotePage ;
+    sh:property [
+        sh:path rc:quotePage ;
+        sh:description "The quote's page is a single integer, starting at 1." ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 1 ;
+        sh:maxCount 1 ;
+    ] ;
     sh:property [
         sh:path rc:supportingQuote ;
         sh:description "A quote page needs the quote it locates." ;

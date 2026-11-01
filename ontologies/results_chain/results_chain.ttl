@@ -74,8 +74,7 @@ rc:occursIn a owl:ObjectProperty ;
 
 rc:hasTarget a owl:ObjectProperty ;
     rdfs:label "has target" ;
-    rdfs:comment "Links an impact to the conservation target whose desired state it describes: an ENVO habitat or ecosystem, or a species taxon (GBIF, NCBITaxon or Wikidata). An impact may have several targets." ;
-    rdfs:domain rc:Impact .
+    rdfs:comment "Links an impact to the conservation target whose desired state it describes: an ENVO habitat or ecosystem, or a species taxon (GBIF, NCBITaxon or Wikidata). An impact may have several targets. Only impacts use it; the shapes check that, rather than an rdfs:domain that would silently retype a misused subject as an impact." .
 
 rc:hasIndicator a owl:ObjectProperty ;
     rdfs:label "has indicator" ;
@@ -108,6 +107,9 @@ rc:Inferred a owl:NamedIndividual, rc:Basis ;
     rdfs:label "Inferred" ;
     rdfs:comment "The source does not state this element or link; it was added to complete the chain's logic." .
 
+[] a owl:AllDifferent ;
+    owl:distinctMembers ( rc:Stated rc:Inferred ) .
+
 rc:basis a owl:ObjectProperty, owl:FunctionalProperty ;
     rdfs:label "basis" ;
     rdfs:comment "Whether a results chain element, or a reified rc:leadsTo statement, is stated in its source or inferred." ;
@@ -115,8 +117,8 @@ rc:basis a owl:ObjectProperty, owl:FunctionalProperty ;
 
 rc:supportingQuote a owl:DatatypeProperty, owl:FunctionalProperty ;
     rdfs:label "supporting quote" ;
-    rdfs:comment "A short verbatim passage from the source that supports a results chain element or a reified rc:leadsTo statement." ;
-    rdfs:range xsd:string .
+    rdfs:comment "A short verbatim passage from the source that supports a results chain element or a reified rc:leadsTo statement. May be language-tagged." ;
+    rdfs:range rdf:PlainLiteral .
 
 rc:quotePage a owl:DatatypeProperty, owl:FunctionalProperty ;
     rdfs:label "quote page" ;

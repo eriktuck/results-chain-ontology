@@ -31,7 +31,7 @@ uv run python sources/envo/download_envo.py
 
 ## 4. Output: `envo.owl`
 The resulting file is the full ENVO ontology in OWL/XML or Turtle format.
-- **Interoperability:** This file is imported into the **Results Chain Ontology** to provide standardized targets for `rc:Impact` individuals using `skos:narrowMatch` or `skos:exactMatch`.
+- **Interoperability:** This file is imported into the **Results Chain Ontology** to provide standardized targets for `rc:Impact` individuals using `rc:hasTarget`. (Earlier versions used `skos:narrowMatch`; the shapes no longer check it, so move existing alignments to `rc:hasTarget`.)
 
 ## 5. Provenance Note
 This directory contains a local mirror of the ENVO ontology. All intellectual property remains with the ENVO consortium and the OBO Foundry.
