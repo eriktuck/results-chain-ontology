@@ -31,6 +31,7 @@ shrc:StrategyShape
     sh:property [
         sh:path skos:exactMatch ;
         sh:description "Strategies should align with CMP Action Taxonomy." ;
+        sh:severity sh:Warning ;
         sh:minCount 1 ;
         sh:nodeKind sh:IRI ;
     ] .
@@ -53,6 +54,7 @@ shrc:ResultShape
     sh:property [
         sh:path rc:hasIndicator ;
         sh:description "Every result should have at least one indicator." ;
+        sh:severity sh:Warning ;
         sh:class rc:Indicator ;
         sh:minCount 1 ;
     ] .
@@ -85,10 +87,12 @@ shrc:ImpactShape
         sh:minCount 1 ;
     ] ;
     sh:property [
-        sh:path skos:narrowMatch ;
-        sh:description "Impacts should align with ENVO via skos:narrowMatch." ;
+        sh:path rc:hasTarget ;
+        sh:description "Impacts should name their conservation target: an ENVO habitat or ecosystem, or a species taxon (GBIF, NCBITaxon, Wikidata)." ;
+        sh:severity sh:Warning ;
         sh:minCount 1 ;
         sh:nodeKind sh:IRI ;
+        sh:pattern "^(https?://purl\\.obolibrary\\.org/obo/(ENVO|NCBITaxon)_|https?://(www\\.)?gbif\\.org/species/|https?://www\\.wikidata\\.org/(entity|wiki)/Q)" ;
     ] .
 
 #################################################################
@@ -115,6 +119,7 @@ shrc:IndicatorShape
     sh:property [
         sh:path skos:related ;
         sh:description "Indicators should align with the UNBIS Thesaurus." ;
+        sh:severity sh:Warning ;
         sh:minCount 1 ;
         sh:nodeKind sh:IRI ;
     ] .
@@ -130,4 +135,53 @@ shrc:OccursInShape
         sh:path rc:occursIn ;
         sh:description "The range of occursIn must always be a Context." ;
         sh:class rc:Context ;
+    ] .
+
+shrc:HasTargetShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf rc:hasTarget ;
+    sh:class rc:Impact ;
+    sh:message "rc:hasTarget may only be used on an Impact." .
+
+#################################################################
+#    Provenance Shapes
+#################################################################
+
+shrc:BasisShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf rc:basis ;
+    sh:property [
+        sh:path rc:basis ;
+        sh:description "An element or link has one basis: rc:Stated or rc:Inferred." ;
+        sh:in ( rc:Stated rc:Inferred ) ;
+        sh:maxCount 1 ;
+    ] .
+
+shrc:SupportingQuoteShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf rc:supportingQuote ;
+    sh:property [
+        sh:path rc:supportingQuote ;
+        sh:description "An element or link has at most one supporting quote, as a string (optionally language-tagged)." ;
+        sh:or (
+            [ sh:datatype xsd:string ]
+            [ sh:datatype rdf:langString ]
+        ) ;
+        sh:maxCount 1 ;
+    ] .
+
+shrc:QuotePageShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf rc:quotePage ;
+    sh:property [
+        sh:path rc:quotePage ;
+        sh:description "The quote's page is a single integer, starting at 1." ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path rc:supportingQuote ;
+        sh:description "A quote page needs the quote it locates." ;
+        sh:minCount 1 ;
     ] .

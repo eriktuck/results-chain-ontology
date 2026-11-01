@@ -34,6 +34,26 @@ The ontology defines the following classes and properties to represent the "Theo
 | `rc:addresses` | addresses | Direct link between a strategy and a threat. | Strategy $\rightarrow$ ThreatReductionResult |
 | `rc:occursIn` | occurs in | Spatial or institutional anchoring. | (Strategy/Result/Impact) $\rightarrow$ Context |
 | `rc:hasIndicator` | has indicator | Linking measurement to logic. | (Result/Impact) $\rightarrow$ Indicator |
+| `rc:hasTarget` | has target | The conservation target an impact is about: an ENVO habitat or ecosystem, or a species taxon. | Impact $\rightarrow$ (ENVO class / taxon) |
+
+### Provenance
+A chain built from a document mixes what the document says with what had to be inferred to complete the logic. These terms record which is which and the passage behind each element. Record the source document with `prov:wasDerivedFrom`.
+
+| Term | Type | Purpose |
+| :--- | :--- | :--- |
+| `rc:basis` | Object property (functional) | `rc:Stated` or `rc:Inferred`. |
+| `rc:supportingQuote` | Datatype property (functional) | A short verbatim passage from the source. |
+| `rc:quotePage` | Datatype property (functional) | The 1-based page where the quote appears. |
+
+To describe a link, reify the `rc:leadsTo` triple as an `rdf:Statement` and attach these properties to the statement:
+
+```turtle
+ex:link1 a rdf:Statement ;
+    rdf:subject ex:Strategy1 ; rdf:predicate rc:leadsTo ; rdf:object ex:Result1 ;
+    rc:basis rc:Stated ;
+    rc:supportingQuote "Patrols will deter poachers." ;
+    rc:quotePage 4 .
+```
 
 ---
 
@@ -45,16 +65,22 @@ A core feature of this ontology is its alignment with global standards found in 
 | :--- | :--- | :--- |
 | **Strategy** | CMP Action Taxonomy / Conservation Evidence | `skos:exactMatch` |
 | **ThreatReductionResult** | CMP Threat Taxonomy | `skos:related` |
-| **Impact** | ENVO (Environment Ontology) | `skos:narrowMatch` |
+| **Impact** | ENVO for habitats and ecosystems; GBIF, NCBITaxon or Wikidata for species | `rc:hasTarget` |
 | **Context** | Wikidata / DBpedia | `owl:sameAs` (via Wikifiers) |
 | **Indicator** | UNBIS Thesaurus | `skos:related` |
 
 The ENVO import and UNBIS import is commented out for now to reduce file size and speed up documentation steps.
 
+## Validation
+
+`ontologies/shapes/results_chain_shapes.shacl.ttl` holds the SHACL shapes. Run `make validate` to check the sample chains in `scripts/validate_graph.py`.
+
+Shapes described with "must" are violations, which fail validation. The "should align" shapes are warnings, which are reported but don't fail it. These cover CMP actions for strategies, indicators on results, targets for impacts, and UNBIS links for indicators. Validate with RDFS inference over the ontology so a `rc:ThreatReductionResult` is also checked as a `rc:Result`.
+
 ---
 
 ## Technical Metadata
-- **Namespace:** `http://example.org/ontology/results-chain#`
+- **Namespace:** `https://eriktuck.github.io/results-chain-ontology#`
 - **Prefix:** `rc`
 - **Format:** Turtle (`.ttl`)
 - **Compatibility:** Optimized for **TopBraid EDG**.

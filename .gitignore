@@ -14,8 +14,10 @@ wheels/
 robot
 
 # Merged outputs
-merged_results_chain.ttldocs/
+merged_results_chain.ttl
+
+# Generated documentation and scratch files
+docs/
 output/
 output_test/
-docs/
 tmp*

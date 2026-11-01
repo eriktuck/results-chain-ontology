@@ -29,7 +29,7 @@ uv run python sources/cmp/threats/parse_cmp_threats.py
 The script performs the following steps:
 1.  **Extraction:** Reads the "IUCN-CMP Threats v 4.0" sheet from the source CSV.
 2.  **Hierarchy Mapping:** Maps the three-level hierarchy (e.g., `1. Residential & Commercial Development` -> `1.1 Housing & Urban Areas`) to `skos:broader` relationships.
-3.  **URI Minting:** Generates stable URIs using the pattern: `https://conservationstandards.org/library-item/threats-classification/#`
+3.  **URI Minting:** Generates stable URIs using the pattern: `https://conservationstandards.org/library-item/threats-classification#`
 4.  **Metadata Enrichment:** 
     *   Maps "Threat Category" to `skos:prefLabel`.
     *   Maps "Threat Definition" to `skos:definition`.
@@ -38,7 +38,7 @@ The script performs the following steps:
 
 ## 4. Output: `cmp_threats_4.0.ttl`
 The resulting file is a **SKOS Concept Scheme**. 
-- **Base URI:** `https://conservationstandards.org/library-item/threats-classification/#`
+- **Base URI:** `https://conservationstandards.org/library-item/threats-classification#`
 - **Primary Class:** `skos:Concept`
 - **Interoperability:** This file is designed to be imported (via `owl:imports`) by the **Results Chain Ontology** to populate `rc:ThreatReductionResult` nodes.
 
