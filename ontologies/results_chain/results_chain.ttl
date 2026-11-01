@@ -40,7 +40,7 @@ rc:ThreatReductionResult a owl:Class ;
 
 rc:Impact a owl:Class ;
     rdfs:label "Impact" ;
-    rdfs:comment "The desired future state of a conservation target (e.g., species, habitat). Map to ENVO." .
+    rdfs:comment "The desired future state of a conservation target (e.g., species, habitat). Map habitats and ecosystems to ENVO and species to a taxon (GBIF, NCBITaxon or Wikidata)." .
 
 rc:Context a owl:Class ;
     rdfs:label "Context" ;
@@ -79,11 +79,51 @@ rc:hasIndicator a owl:ObjectProperty ;
     rdfs:range rc:Indicator .
 
 #################################################################
+#    Provenance of Results Chain Statements
+#################################################################
+# A results chain extracted from a document mixes what the document says with
+# what had to be inferred to complete the logic. These terms record which is which,
+# and the passage that supports each element. Record the source document itself
+# with prov:wasDerivedFrom.
+#
+# To describe a link, reify the rc:leadsTo triple as an rdf:Statement
+# (rdf:subject, rdf:predicate rc:leadsTo, rdf:object) and attach these
+# properties to the statement.
+
+rc:Basis a owl:Class ;
+    rdfs:label "Basis" ;
+    rdfs:comment "Whether an element or link of a results chain is stated in its source or inferred." ;
+    owl:equivalentClass [ a owl:Class ; owl:oneOf (rc:Stated rc:Inferred) ] .
+
+rc:Stated a owl:NamedIndividual, rc:Basis ;
+    rdfs:label "Stated" ;
+    rdfs:comment "The source states this element or link explicitly." .
+
+rc:Inferred a owl:NamedIndividual, rc:Basis ;
+    rdfs:label "Inferred" ;
+    rdfs:comment "The source does not state this element or link; it was added to complete the chain's logic." .
+
+rc:basis a owl:ObjectProperty, owl:FunctionalProperty ;
+    rdfs:label "basis" ;
+    rdfs:comment "Whether a results chain element, or a reified rc:leadsTo statement, is stated in its source or inferred." ;
+    rdfs:range rc:Basis .
+
+rc:supportingQuote a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:label "supporting quote" ;
+    rdfs:comment "A short verbatim passage from the source that supports a results chain element or a reified rc:leadsTo statement." ;
+    rdfs:range xsd:string .
+
+rc:quotePage a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:label "quote page" ;
+    rdfs:comment "The 1-based page of the source on which the supporting quote appears." ;
+    rdfs:range xsd:integer .
+
+#################################################################
 #    Annotations for External Mappings
 #################################################################
 
 rc:Strategy skos:note "Align with CMP Action Taxonomy via skos:exactMatch" .
 rc:ThreatReductionResult skos:note "Align with CMP Threat Taxonomy via skos:related" .
-rc:Impact skos:note "Align with ENVO via skos:narrowMatch" .
+rc:Impact skos:note "Align habitats and ecosystems with ENVO, and species with a taxon (GBIF, NCBITaxon or Wikidata), via skos:narrowMatch" .
 rc:Context skos:note "Align with Wikidata/DBpedia URIs via owl:sameAs" .
 rc:Indicator skos:note "Align with UNBIS Thesaurus via skos:related" .
