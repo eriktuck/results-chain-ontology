@@ -87,8 +87,8 @@ shrc:ImpactShape
         sh:minCount 1 ;
     ] ;
     sh:property [
-        sh:path skos:narrowMatch ;
-        sh:description "Impacts should align with ENVO (habitats, ecosystems) or a taxon (GBIF, NCBITaxon, Wikidata) via skos:narrowMatch." ;
+        sh:path rc:hasTarget ;
+        sh:description "Impacts should name their conservation target: an ENVO habitat or ecosystem, or a species taxon (GBIF, NCBITaxon, Wikidata)." ;
         sh:severity sh:Warning ;
         sh:minCount 1 ;
         sh:nodeKind sh:IRI ;

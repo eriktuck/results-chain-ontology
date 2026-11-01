@@ -42,7 +42,7 @@ ex:Threat_A a rc:ThreatReductionResult ;
     rc:basis rc:Stated .
 
 ex:Impact_A a rc:Impact ;
-    skos:narrowMatch <https://www.gbif.org/species/2435350> ;  # Loxodonta africana
+    rc:hasTarget <https://www.gbif.org/species/2435350> ;  # Loxodonta africana
     rc:hasIndicator ex:Indicator_A2 ;
     rc:basis rc:Stated .
 
@@ -65,7 +65,7 @@ ex:Strategy_B a rc:Strategy ;
     rc:quotePage 2 .                  # violation: a page with no quote
 
 ex:Impact_B a rc:Impact ;             # violation: no indicator
-    skos:narrowMatch <http://example.org/my-species> .  # warning: not ENVO or a taxon
+    rc:hasTarget <http://example.org/my-species> .  # warning: not ENVO or a taxon
 """
 
 

@@ -40,7 +40,7 @@ rc:ThreatReductionResult a owl:Class ;
 
 rc:Impact a owl:Class ;
     rdfs:label "Impact" ;
-    rdfs:comment "The desired future state of a conservation target (e.g., species, habitat). Map habitats and ecosystems to ENVO and species to a taxon (GBIF, NCBITaxon or Wikidata)." .
+    rdfs:comment "The desired future state of a conservation target (e.g., species, habitat). Name the target with rc:hasTarget." .
 
 rc:Context a owl:Class ;
     rdfs:label "Context" ;
@@ -71,6 +71,11 @@ rc:occursIn a owl:ObjectProperty ;
     rdfs:comment "Links a component of the results chain to a specific geographic or institutional context." ;
     rdfs:domain [ a owl:Class ; owl:unionOf (rc:Strategy rc:Result rc:Impact) ] ;
     rdfs:range rc:Context .
+
+rc:hasTarget a owl:ObjectProperty ;
+    rdfs:label "has target" ;
+    rdfs:comment "Links an impact to the conservation target whose desired state it describes: an ENVO habitat or ecosystem, or a species taxon (GBIF, NCBITaxon or Wikidata). An impact may have several targets." ;
+    rdfs:domain rc:Impact .
 
 rc:hasIndicator a owl:ObjectProperty ;
     rdfs:label "has indicator" ;
@@ -124,6 +129,6 @@ rc:quotePage a owl:DatatypeProperty, owl:FunctionalProperty ;
 
 rc:Strategy skos:note "Align with CMP Action Taxonomy via skos:exactMatch" .
 rc:ThreatReductionResult skos:note "Align with CMP Threat Taxonomy via skos:related" .
-rc:Impact skos:note "Align habitats and ecosystems with ENVO, and species with a taxon (GBIF, NCBITaxon or Wikidata), via skos:narrowMatch" .
+rc:Impact skos:note "Name the conservation target with rc:hasTarget: an ENVO habitat or ecosystem, or a species taxon (GBIF, NCBITaxon or Wikidata)" .
 rc:Context skos:note "Align with Wikidata/DBpedia URIs via owl:sameAs" .
 rc:Indicator skos:note "Align with UNBIS Thesaurus via skos:related" .

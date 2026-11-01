@@ -205,6 +205,13 @@ rc:hasIndicator rdf:type owl:ObjectProperty ;
                 rdfs:label "has indicator" .
 
 
+###  https://eriktuck.github.io/results-chain-ontology#hasTarget
+rc:hasTarget rdf:type owl:ObjectProperty ;
+             rdfs:domain rc:Impact ;
+             rdfs:comment "Links an impact to the conservation target whose desired state it describes: an ENVO habitat or ecosystem, or a species taxon (GBIF, NCBITaxon or Wikidata). An impact may have several targets." ;
+             rdfs:label "has target" .
+
+
 ###  https://eriktuck.github.io/results-chain-ontology#leadsTo
 rc:leadsTo rdf:type owl:ObjectProperty ,
                     owl:TransitiveProperty ;
@@ -342,9 +349,9 @@ rc:Context rdf:type owl:Class ;
 
 ###  https://eriktuck.github.io/results-chain-ontology#Impact
 rc:Impact rdf:type owl:Class ;
-          rdfs:comment "The desired future state of a conservation target (e.g., species, habitat). Map habitats and ecosystems to ENVO and species to a taxon (GBIF, NCBITaxon or Wikidata)." ;
+          rdfs:comment "The desired future state of a conservation target (e.g., species, habitat). Name the target with rc:hasTarget." ;
           rdfs:label "Impact" ;
-          skos:note "Align habitats and ecosystems with ENVO, and species with a taxon (GBIF, NCBITaxon or Wikidata), via skos:narrowMatch" .
+          skos:note "Name the conservation target with rc:hasTarget: an ENVO habitat or ecosystem, or a species taxon (GBIF, NCBITaxon or Wikidata)" .
 
 
 ###  https://eriktuck.github.io/results-chain-ontology#Indicator
